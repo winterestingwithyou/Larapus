@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Larapus'),
 
     /*
     |--------------------------------------------------------------------------
@@ -159,7 +159,9 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Laratrust\LaratrustServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -183,6 +185,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Laratrust' => Laratrust\LaratrustFacade::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
     ])->toArray(),
 
 ];
